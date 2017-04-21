@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.action.excludePattern" value="/dwr/.*,/noaction/.*" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<action name="login" class="com.abczww.babel.sys2.action.LoginAction">
+			<result name="login">/WEB-INF/pages/base/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="registe" class="com.abczww.babel.sys2.action.RegisteAction">
+			<result name="login">/WEB-INF/pages/registe.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+</struts>
